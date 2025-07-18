@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+  height: 100%;
+  font-family: 'Press Start 2P', Tahoma, sans-serif;
+  background-color: #121212;
+}
+
+.pop-up{
+    position: absolute; 
+    top: 20%;
+    left: 20%;
+    z-index: 9999;
+    background-color: #d0d0d6;
+    text-align:center;
+    width: 300px;
+    max-width:90%;
+    box-shadow: inset 0 0 3px rgb(0, 0, 0.5), 0 0 10px black;
+    border-right: 2px solid  rgba(0, 0, 0, 0.978);
+    border-bottom: 2px solid  rgba(0, 0, 0, 0.978);
+    border-radius: 4px;
+    padding-bottom: 20px;
+}
+.rectangular {
+    position: relative; /* ✅ ADD THIS LINE */
+    background-color: rgb(3, 3, 177);
+    text-align: left;
+    height: 30px;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.error-text{
+    font-size:10px;
+    color: black;
+    line-height: 1.5;
+}
+
+#error-sign{
+    width:50px;
+    height: 50px;
+}
+
+.error-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    
+}
+button{
+    border:2px solid #7a7a88;
+    width: 120px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 10px;
+    box-shadow: inset 0 0 3px black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.ok:hover {
+  background-color: #c0c0c0;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #c6c6c6;
+    border: 2px solid black;
+    padding: 2px 6px;
+    font-family: 'Press Start 2P', Tahoma, sans-serif;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+    box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.7),
+                inset 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.exit-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+
+
+@media (max-width: 480px) {
+  .error-text, .rectangular {
+    font-size: 8px;
+  }
+}
