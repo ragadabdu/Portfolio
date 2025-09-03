@@ -58,7 +58,7 @@ function showFinalPopup() {
     </div>
     <div class="error-container">
       <img id="error-sign" src="assets/error-icon.png" alt="error" />
-      <p class="error-text">Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
+      <p class="error-text">Click <a class="ok" href="Portfolio.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
     </div>
     <button id="ko-button">K.O</button>
   `;
@@ -109,7 +109,7 @@ function createPopup(isLast = false) {
       const okBtn = popup.querySelector('.ok');
 
       if (isLast) {
-        popup.querySelector('.error-text').innerHTML = `Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.`;
+        popup.querySelector('.error-text').innerHTML = `Click <a class="ok" href="Portfolio.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.`;
         okBtn.innerText = "K.O";
 
         okBtn.addEventListener('click', () => {
@@ -167,7 +167,7 @@ function createPopup(isLast = false) {
               </div>
               <div class="error-container">
                 <img id="error-sign" src="assets/error-icon.png" alt="error" />
-                <p class="error-text">Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
+                <p class="error-text">Click <a class="ok" href="Portfolio.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
               </div>
               <button id="ko-button">K.O</button>
             `;
