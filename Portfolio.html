@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game-Themed Portfolio</title>
+  <title>Ragad's</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -11,12 +11,10 @@
       theme: {
         extend: {
           colors: {
-            pastel: {
-              //pink: "#ffe4e6",
-              blue: "#e0f2fe",
-              //green: "#dcfce7",
-              yellow: "#fef9c3",
-              purple: "#f3e8ff",
+            nord: {
+              gray: "#ECEFF4",   // very light gray
+              blue: "#D8DEE9",  // soft blue-gray
+              gold: "#EBCB8B", // golden yellow
             }
           }
         }
@@ -30,7 +28,7 @@
     }
   </style>
 </head>
-<body class="bg-pastel-purple dark:bg-gray-950 text-gray-900 dark:text-white font-sans tracking-wide">
+<body class="bg-nord-gray dark:bg-gray-950 text-gray-900 dark:text-white font-sans tracking-wide">
 
 <!-- Theme Toggle -->
 <div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
@@ -42,15 +40,15 @@
 </div>
 
 <!-- Welcome Section -->
-<section class="text-center py-12 px-6 bg-pastel-purple dark:bg-gray-950">
+<section class="text-center py-12 px-6 bg-nord-gray dark:bg-gray-950">
   <h1 class="text-2xl sm:text-4xl game-font text-yellow-500 dark:text-yellow-400 mb-4">👋 Welcome, Player!</h1>
   <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-    I'm <span class="text-gray-900 dark:text-white font-semibold">Ragad</span> — a curious and committed Software Engineering student who believes in creating with purpose. I build things I’m proud of, always aiming to learn, improve, and bring value — whether to a business, a user, or just someone exploring the web.
+    I'm <span class="text-gray-900 dark:text-white font-semibold">Ragad</span> — a curious and committed Software Engineering student. I’m proud of, always aiming to learn, improve, and bring value — whether to a business, a user, or just someone exploring the web.
   </p>
 </section>
 
 <!-- About Me Section -->
-<section class="py-8 px-6 bg-pastel-purple dark:bg-gray-950">
+<section class="py-8 px-6 bg-nord-gray dark:bg-gray-950">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
     <img src="avatar-placeholder.jpg" alt="avatar" class="w-48 h-48 rounded-xl mx-auto md:mx-0 shadow-lg">
     <div>
@@ -59,55 +57,51 @@
         I'm a second-year Software Engineering student with a love for experimenting, building, and stretching the limits of what I can learn. From club leadership in high school to diving deep into programming fundamentals and responsive design certifications, I've always found joy in growing — not just as a developer, but as a thinker.
       </p>
       <p class="text-gray-600 dark:text-gray-400 mb-3">
-        I’ve explored Python, JavaScript, Bootstrap, Tailwind, and Java, and even dabbled in design with tools like Figma. I enjoy switching gears — one week I’m learning about cybersecurity, the next, I’m building UI components or thinking about writing for a blog.
+        I’ve explored Python, JavaScript, Bootstrap, Tailwind, and Java, and even dabbled in design with tools like Figma. I enjoy switching gears — one week I’m learning about cybersecurity, the next, I’m building UI components.
       </p>
-      <p class="text-gray-600 dark:text-gray-400">
+      <!--<p class="text-gray-600 dark:text-gray-400">
         What excites me most is building tools that serve real-world needs — especially in places like mine, where digital services are still growing. Whether it’s banking, e-commerce, or delivery systems, I’m inspired to build things that not only work — but matter.
-      </p>
+      </p>-->
     </div>
   </div>
 </section>
 
 <!-- Projects Section -->
-<section class="py-12 px-6 bg-pastel-blue dark:bg-gray-900">
+<section class="py-12 px-6 bg-nord-blue dark:bg-gray-900">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl font-bold mb-6 text-yellow-600 dark:text-yellow-400">🧩 Projects</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-pastel-yellow dark:bg-gray-800 p-5 rounded-xl hover:scale-105 transition shadow-md">
-        <h3 class="font-semibold text-gray-900 dark:text-white mb-2">🏥 Hospital Manager</h3>
-        <p class="text-sm text-gray-700 dark:text-gray-400">
-          A receptionist-focused hospital web app with Arabic support, built using Django and Bootstrap.
-        </p>
-      </div>
-      <div class="bg-pastel-yellow dark:bg-gray-800 p-5 rounded-xl hover:scale-105 transition shadow-md">
-        <h3 class="font-semibold text-gray-900 dark:text-white mb-2">📦 Student Portfolio Hub</h3>
-        <p class="text-sm text-gray-700 dark:text-gray-400">
-          Connects students and recruiters through dynamic profile pages and portfolios.
-        </p>
-      </div>
+      <a href="https://hospital-lead.onrender.com" target="_blank" class="block">
+        <div class="bg-nord-yellow dark:bg-gray-800 p-5 rounded-xl hover:scale-105 transition shadow-md">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">🏥 Hospital Lead Tracker</h3>
+          <p class="text-sm text-gray-700 dark:text-gray-400">
+            A receptionist-focused hospital web in Arabic, built using Django and Bootstrap.
+          </p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- Skills + Tools -->
-<section class="py-12 px-6 bg-pastel-purple dark:bg-gray-950">
+<section class="py-12 px-6 bg-nord-gray dark:bg-gray-950">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-bold mb-6 text-yellow-600 dark:text-yellow-400">🛠 Tools & Skills</h2>
     <div class="grid sm:grid-cols-2 gap-6">
       <div>
         <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Design</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Figma</span>
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Canva</span>
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Tailwind</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Figma</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Bootstrap</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Tailwind</span>
         </div>
       </div>
       <div>
         <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Dev Tools</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Django</span>
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">JavaScript</span>
-          <span class="bg-pastel-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Bootstrap</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Django</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">JavaScript</span>
+          <span class="bg-nord-yellow dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Python</span>
         </div>
       </div>
     </div>
@@ -115,9 +109,9 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-8 bg-pastel-blue dark:bg-gray-900 text-center text-gray-700 dark:text-gray-400 text-sm">
-  <p>💌 Let’s connect: <a href="mailto:yourmail@example.com" class="text-yellow-600 dark:text-yellow-400 hover:underline">yourmail@example.com</a></p>
-  <p>🎨 Made with love and caffeine ☕</p>
+<footer class="py-8 bg-nord-blue dark:bg-gray-900 text-center text-gray-700 dark:text-gray-400 text-sm">
+  <p>💌 Let’s connect: <a href="mailto:ragadabdelwahab81@gmail.com" class="text-yellow-600 dark:text-yellow-400 hover:underline">ragadabdelwahab81@gmail.com</a></p>
+  <p>🎨 Made with syntax, logic, and everything magic.  ☕</p>
 </footer>
 
 <script>
