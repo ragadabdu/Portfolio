@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ragad's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    .game-font {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-white font-sans tracking-wide">
+<div class="fixed top-4 right-4 z-50 flex items-center space-x-2">
+  <span class="text-yellow-400 font-semibold game-font select-none">☀️</span>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode" class="relative w-14 h-8 bg-yellow-400 rounded-full shadow-inner focus:outline-none">
+    <span class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out" id="toggle-circle"></span>
+  </button>
+  <span class="text-gray-300 font-semibold game-font select-none">🌙</span>
+</div>
+
+  <!-- Welcome Section -->
+  <section class="text-center py-12 px-6">
+  <h1 class="text-2xl sm:text-4xl game-font text-yellow-400 mb-4">👋 Welcome, Player!</h1>
+  <p class="text-gray-800 text-lg dark:text-gray-400 max-w-3xl mx-auto">
+    I'm <span class="text-red-400 dark:text-white font-semibold">Ragad</span> — a curious Software Engineering student who believes in creating with purpose and fun. I’m always aiming to learn, improve, and bring value — whether to a business, a user, or just someone exploring the web.
+  </p>
+</section>
+
+
+  <!-- About Me Section -->
+  <section class="py-8 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+    <img src="avatar-placeholder.jpg" alt="avatar" class="w-48 h-48 rounded-xl mx-auto md:mx-0 shadow-lg">
+    <div>
+      <h2 class="text-xl font-bold mb-3">🎮 About Me</h2>
+      <p class="text-red-400 dark:text-gray-400 mb-3">
+        I'm a second-year Software Engineering student that loves experimenting, building, and testing what I can learn. From club leadership in high school to diving deep into programming fundamentals, I've found joy in creating as a developer.
+      </p>
+      <p class="text-red-400 dark:text-gray-400 mb-3">
+        I’ve explored Python, JavaScript, Bootstrap, Tailwind, and Java, and even dabbled in design with tools like Figma. I enjoy switching gears — one week I’m learning about cybersecurity, the next, I’m building UI components or thinking about writing for a blog.
+      </p>
+      <p class="text-red-400 dark:text-gray-400">
+        It is exciting to build tools that serve real-world needs — especially in places like mine, where digital services are still growing. Whether it’s banking, e-commerce, or delivery systems, I’m inspired to build things that not only work — but matter.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section class="py-12 px-6 bg-red-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-yellow-600 dark:text-yellow-400">🧩 Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-200 dark:bg-gray-800 p-5 rounded-xl hover:scale-105 transition shadow-md">
+          <a href="https://hospital-lead.onrender.com">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">🏥 Hospital Lead Tracker</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-400">
+              A receptionist-focused hospital web app with Arabic support, built using Django to keep track of appointments and leads.
+            </p>
+          </a>
+        </div>
+        <div class="bg-gray-200 dark:bg-gray-800 p-5 rounded-xl hover:scale-105 transition shadow-md">
+          <a href="https://homelink-erlq.onrender.com">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">📦 Homelink2.0</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-400">
+              An updated version of a group project that connects service providers to homeowners.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-yellow-600 dark:text-yellow-400">🛠 Tools & Skills</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Design</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Figma</span>
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Canva</span>
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Tailwind</span>
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Bootstrap</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Dev Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Django</span>
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">JavaScript</span>
+            <span class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-900 dark:text-white">Java</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 bg-red-100 dark:bg-gray-900 text-center text-gray-900 dark:text-gray-400 text-sm">
+    <p>💌 Let’s connect: <a href="mailto:ragadabdelwahab81@gmail.com" class="text-yellow-600 dark:text-yellow-400 hover:underline">ragadabdelwahab81@gmail.com</a></p>
+    <p>🎨 Made with love and caffeine ☕</p>
+  </footer>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const toggleCircle = document.getElementById('toggle-circle');
+  const html = document.documentElement;
+
+  if (html.classList.contains('dark')) {
+    toggleCircle.style.transform = 'translateX(26px)';
+  } else {
+    toggleCircle.style.transform = 'translateX(0)';
+  }
+
+  btn.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      toggleCircle.style.transform = 'translateX(0)';
+    } else {
+      html.classList.add('dark');
+      toggleCircle.style.transform = 'translateX(26px)';
+    }
+  });
+</script>
+
+
+</body>
+</html>

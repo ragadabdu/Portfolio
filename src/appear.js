@@ -2,8 +2,23 @@ let maxPopups = 18;
 let count = 0;
 
 function playLoseSound() {
-  const loseSound = new Audio('assets/lose.mp3');
+  const loseSound = new Audio('public/sounds/lose.mp3');
   loseSound.play();
+}
+
+function addSkipButton(popup) {
+  const skipBtn = document.createElement('button');
+  skipBtn.classList.add('skip-btn');
+  skipBtn.textContent = 'Skip Intro';
+  skipBtn.style.marginLeft = '10px'; // styling example
+  popup.querySelector('.rectangular').appendChild(skipBtn);
+
+  skipBtn.addEventListener('click', () => {
+    // Clear all popups and intervals and go straight to homepage
+    clearInterval(popupInterval);
+    document.querySelectorAll('.pop-up').forEach(p => p.remove());
+    window.location.href = 'homepage.html';
+  });
 }
 
 function showYouLostPopup() {
@@ -14,15 +29,15 @@ function showYouLostPopup() {
   lossPopup.style.left = '50%';
   lossPopup.style.transform = 'translate(-50%, -50%)';
   lossPopup.style.zIndex = '10000';
-  lossPopup.style.border = '3px solid black';
-  lossPopup.style.boxShadow = '0 0 20px black';
+  lossPopup.style.border = '3px solid #773f32ff';
+  lossPopup.style.boxShadow = '0 0 20px #A76D60 ';
   lossPopup.innerHTML = `
     <div class="rectangular">
       <p class="error">YOU LOST</p>
       <span class="exit-btn">X</span>
     </div>
     <div class="error-container">
-      <img id="error-sign" src="assets/error-icon.png" alt="error" />
+      <img id="error-sign" src="public/images/error-icon.png" alt="error" />
       <p class="error-text">You lost.</p>
     </div>
     <button class="try-again">Try Again</button>
@@ -49,16 +64,16 @@ function showFinalPopup() {
   finalPopup.style.left = '50%';
   finalPopup.style.transform = 'translate(-50%, -50%)';
   finalPopup.style.zIndex = '10000';
-  finalPopup.style.border = '3px solid limegreen';
-  finalPopup.style.boxShadow = '0 0 20px limegreen';
+  finalPopup.style.border = '3px solid #b23012ff ';
+  finalPopup.style.boxShadow = '0 0 20px #A76D60 ';
   finalPopup.innerHTML = `
     <div class="rectangular">
-      <p class="error">FINAL CHANCE</p>
+      <p class="error">TRY AGAIN</p>
       <span class="exit-btn">X</span>
     </div>
     <div class="error-container">
-      <img id="error-sign" src="assets/error-icon.png" alt="error" />
-      <p class="error-text">Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
+      <img id="error-sign" src="public/images/error-icon.png" alt="error" />
+      <p class="error-text">Click <a class="ok" href="homepage.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
     </div>
     <button id="ko-button">K.O</button>
   `;
@@ -83,7 +98,7 @@ function createPopup(isLast = false) {
       const container = document.createElement('div');
       container.innerHTML = html;
       const popup = container.querySelector('.pop-up');
-      const sound = new Audio('assets/error-sound.wav');
+      const sound = new Audio('public/sounds/error-sound.wav');
       sound.play();
 
       // Position
@@ -93,8 +108,8 @@ function createPopup(isLast = false) {
         popup.style.left = '50%';
         popup.style.transform = 'translate(-50%, -50%)';
         popup.style.zIndex = '9999';
-        popup.style.border = '3px solid red';
-        popup.style.boxShadow = '0 0 20px red';
+        popup.style.border = '3px solid #ac3014ff ';
+        popup.style.boxShadow = '0 0 20px #ac3014ff';
       } else {
         popup.style.top = `${Math.random() * 70 + 10}%`;
         popup.style.left = `${Math.random() * 70 + 10}%`;
@@ -109,7 +124,7 @@ function createPopup(isLast = false) {
       const okBtn = popup.querySelector('.ok');
 
       if (isLast) {
-        popup.querySelector('.error-text').innerHTML = `Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.`;
+        popup.querySelector('.error-text').innerHTML = `Click <a class="ok" href="homepage.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.`;
         okBtn.innerText = "K.O";
 
         okBtn.addEventListener('click', () => {
@@ -123,24 +138,25 @@ function createPopup(isLast = false) {
           lossPopup.style.left = '50%';
           lossPopup.style.transform = 'translate(-50%, -50%)';
           lossPopup.style.zIndex = '10000';
-          lossPopup.style.border = '3px solid black';
-          lossPopup.style.boxShadow = '0 0 20px black';
+          lossPopup.style.border = '3px solid #773f32ff ';
+          lossPopup.style.boxShadow = '0 0 20px #A76D60 ';
           lossPopup.innerHTML = `
             <div class="rectangular">
               <p class="error">YOU LOST</p>
               <span class="exit-btn">X</span>
             </div>
             <div class="error-container">
-              <img id="error-sign" src="assets/error-icon.png" alt="error" />
+              <img id="error-sign" src="public/images/error-icon.png" alt="error" />
               <p class="error-text">You lost.</p>
             </div>
             <button class="try-again">Try Again</button>
           `;
 
           document.body.appendChild(lossPopup);
+          
 
           // Play losing sound
-          const loseSound = new Audio('assets/lose.mp3');
+          const loseSound = new Audio('public/sounds/lose.mp3');
           loseSound.play();
 
           lossPopup.querySelector('.exit-btn').addEventListener('click', () => {
@@ -158,16 +174,16 @@ function createPopup(isLast = false) {
             finalPopup.style.left = '50%';
             finalPopup.style.transform = 'translate(-50%, -50%)';
             finalPopup.style.zIndex = '10000';
-            finalPopup.style.border = '3px solid limegreen';
-            finalPopup.style.boxShadow = '0 0 20px limegreen';
+            finalPopup.style.border = '3px solid #806942ff';
+            finalPopup.style.boxShadow = '0 0 20px #C9A66B';
             finalPopup.innerHTML = `
               <div class="rectangular">
                 <p class="error">FINAL CHANCE</p>
                 <span class="exit-btn">X</span>
               </div>
               <div class="error-container">
-                <img id="error-sign" src="assets/error-icon.png" alt="error" />
-                <p class="error-text">Click <a class="ok" href="https://your-real-site.com" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
+                <img id="error-sign" src="public/images/error-icon.png" alt="error" />
+                <p class="error-text">Click <a class="ok" href="homepage.html" style="text-decoration: none;"><strong>OK</strong></a> to pass.</p>
               </div>
               <button id="ko-button">K.O</button>
             `;
