@@ -10,11 +10,10 @@ function addSkipButton(popup) {
   const skipBtn = document.createElement('button');
   skipBtn.classList.add('skip-btn');
   skipBtn.textContent = 'Skip Intro';
-  skipBtn.style.marginLeft = '10px'; // styling example
+  skipBtn.style.marginLeft = '10px'; 
   popup.querySelector('.rectangular').appendChild(skipBtn);
 
   skipBtn.addEventListener('click', () => {
-    // Clear all popups and intervals and go straight to homepage
     clearInterval(popupInterval);
     document.querySelectorAll('.pop-up').forEach(p => p.remove());
     window.location.href = 'homepage.html';
@@ -51,7 +50,7 @@ function showYouLostPopup() {
 
   lossPopup.querySelector('.try-again').addEventListener('click', () => {
     lossPopup.remove();
-    // Trigger final popup again
+    
     showFinalPopup();
   });
 }

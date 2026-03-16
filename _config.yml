@@ -1,0 +1,7 @@
+# _config.yml
+
+title: Portfolio
+description: "This is my Portfolio"
+baseurl: ""
+url: "https://ragadabdu.github.io" 
+theme: jekyll-theme-primer
